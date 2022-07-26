@@ -14,6 +14,7 @@
 		AF56C0B3288BE7CD00AB8E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF56C0B2288BE7CD00AB8E1E /* Assets.xcassets */; };
 		AF56C0B6288BE7CD00AB8E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF56C0B4288BE7CD00AB8E1E /* LaunchScreen.storyboard */; };
 		AF56C0BE288C077400AB8E1E /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56C0BD288C077400AB8E1E /* SearchResult.swift */; };
+		AFCE23FA288EF77D008092AD /* loadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCE23F9288EF77D008092AD /* loadingCell.xib */; };
 		AFD6351B288C4C0600A44BE1 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD6351A288C4C0600A44BE1 /* SearchResultCell.xib */; };
 		AFD6351D288C5A9B00A44BE1 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6351C288C5A9B00A44BE1 /* SearchResultCell.swift */; };
 		AFD63521288C5F9D00A44BE1 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD6351F288C5F9D00A44BE1 /* NothingFoundCell.xib */; };
@@ -29,6 +30,7 @@
 		AF56C0B5288BE7CD00AB8E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF56C0B7288BE7CD00AB8E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF56C0BD288C077400AB8E1E /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		AFCE23F9288EF77D008092AD /* loadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loadingCell.xib; sourceTree = "<group>"; };
 		AFD6351A288C4C0600A44BE1 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		AFD6351C288C5A9B00A44BE1 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		AFD6351F288C5F9D00A44BE1 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				AFD6351F288C5F9D00A44BE1 /* NothingFoundCell.xib */,
 				AFD6351A288C4C0600A44BE1 /* SearchResultCell.xib */,
 				AFD6351C288C5A9B00A44BE1 /* SearchResultCell.swift */,
+				AFCE23F9288EF77D008092AD /* loadingCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			files = (
 				AF56C0B6288BE7CD00AB8E1E /* LaunchScreen.storyboard in Resources */,
 				AFD6351B288C4C0600A44BE1 /* SearchResultCell.xib in Resources */,
+				AFCE23FA288EF77D008092AD /* loadingCell.xib in Resources */,
 				AFD63521288C5F9D00A44BE1 /* NothingFoundCell.xib in Resources */,
 				AF56C0B3288BE7CD00AB8E1E /* Assets.xcassets in Resources */,
 				AF56C0B1288BE7C900AB8E1E /* Main.storyboard in Resources */,
