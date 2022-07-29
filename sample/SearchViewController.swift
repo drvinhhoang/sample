@@ -18,7 +18,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var searchResults = [SearchResult]()
     var hasSearched = false
@@ -29,7 +29,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.becomeFirstResponder()
-        tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 91, left: 0, bottom: 0, right: 0)
         tableView.register(UINib(nibName: TableView.CellIdentifiers.searchResultCell, bundle: nil), forCellReuseIdentifier: TableView.CellIdentifiers.searchResultCell)
         tableView.register(UINib(nibName: TableView.CellIdentifiers.nothingFoundCell, bundle: nil), forCellReuseIdentifier: TableView.CellIdentifiers.nothingFoundCell)
        // tableView.rowHeight = UITableView.automaticDimension
@@ -37,11 +37,23 @@ class SearchViewController: UIViewController {
         
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
     }
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        print("Segment changed: \(sender.selectedSegmentIndex)")
+        performSearch()
+    }
     
     // MARK: - Helper Methods
-    func iTuneURL(searchText: String) -> URL {
+    func iTuneURL(searchText: String, category: Int) -> URL {
+        let kind: String
+        switch category {
+        case 1: kind = "musicTrack"
+        case 2: kind = "softWare"
+        case 3: kind = "ebook"
+        default: kind = ""
+        }
+        
         let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@", encodedText)
+        let urlString = "https://itunes.apple.com/search?" + "term=\(encodedText)&limit=200&entity=\(kind)"
         let url = URL(string: urlString)
         return url!
     }
@@ -75,6 +87,10 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+       performSearch()
+    }
+    
+    func performSearch() {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
             dataTask?.cancel()
@@ -84,12 +100,12 @@ extension SearchViewController: UISearchBarDelegate {
             hasSearched = true
             searchResults = []
             // 1
-            let url = iTuneURL(searchText: searchBar.text!)
+            let url = iTuneURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex )
             // 2
             let session = URLSession.shared
             // 3
             dataTask = session.dataTask(with: url) {data, response, error in
-                if let error = error as? NSError, error.code == -999 {
+                if let error = error as NSError?, error.code == -999 {
                    return
                 } else if let httpResponse = response as? HTTPURLResponse,
                           httpResponse.statusCode == 200 {

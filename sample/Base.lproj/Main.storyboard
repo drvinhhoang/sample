@@ -44,21 +44,45 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="g8G-rK-RTJ"/>
                                 </connections>
                             </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ban-L8-RiZ">
+                                <rect key="frame" x="0.0" y="51" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="XDK-Ul-qpz">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="0FF-oI-GwE">
+                                            <rect key="frame" x="16" y="5.5" width="343" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Music"/>
+                                                <segment title="Software"/>
+                                                <segment title="E-books"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wPd-nT-SCi"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="p2G-xI-Ahl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6xC-ie-pRp"/>
                             <constraint firstItem="Lph-Aq-ucg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Vz-xH-Z3j"/>
+                            <constraint firstItem="ban-L8-RiZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F4n-Xe-WJn"/>
+                            <constraint firstItem="ban-L8-RiZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fnn-qy-TCJ"/>
                             <constraint firstItem="p2G-xI-Ahl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JmE-iP-fgz"/>
                             <constraint firstItem="Lph-Aq-ucg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cqf-oy-9me"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p2G-xI-Ahl" secondAttribute="trailing" id="d7c-kQ-Vle"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p2G-xI-Ahl" secondAttribute="bottom" id="kMw-0p-0uw"/>
                             <constraint firstItem="Lph-Aq-ucg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="o2y-WU-RGA"/>
+                            <constraint firstItem="ban-L8-RiZ" firstAttribute="top" secondItem="Lph-Aq-ucg" secondAttribute="bottom" id="p2F-oN-5x7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="Lph-Aq-ucg" id="swV-mC-Ibh"/>
+                        <outlet property="segmentedControl" destination="0FF-oI-GwE" id="70s-mZ-3Xb"/>
                         <outlet property="tableView" destination="p2G-xI-Ahl" id="Va0-Ts-zMm"/>
                     </connections>
                 </viewController>
