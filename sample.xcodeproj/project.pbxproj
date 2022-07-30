@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF43DCB02894D8100097B531 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43DCAF2894D8100097B531 /* UIImageView+DownloadImage.swift */; };
 		AF56C0AA288BE7C900AB8E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56C0A9288BE7C900AB8E1E /* AppDelegate.swift */; };
 		AF56C0AC288BE7C900AB8E1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56C0AB288BE7C900AB8E1E /* SceneDelegate.swift */; };
 		AF56C0AE288BE7C900AB8E1E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56C0AD288BE7C900AB8E1E /* SearchViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF43DCAF2894D8100097B531 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		AF56C0A6288BE7C900AB8E1E /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF56C0A9288BE7C900AB8E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF56C0AB288BE7C900AB8E1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				AF56C0AB288BE7C900AB8E1E /* SceneDelegate.swift */,
 				AF56C0AD288BE7C900AB8E1E /* SearchViewController.swift */,
 				AF56C0BD288C077400AB8E1E /* SearchResult.swift */,
+				AF43DCAF2894D8100097B531 /* UIImageView+DownloadImage.swift */,
 				AF56C0C5288C0EFA00AB8E1E /* Cell */,
 				AF56C0AF288BE7C900AB8E1E /* Main.storyboard */,
 				AF56C0B2288BE7CD00AB8E1E /* Assets.xcassets */,
@@ -166,6 +169,7 @@
 			files = (
 				AF56C0AE288BE7C900AB8E1E /* SearchViewController.swift in Sources */,
 				AF56C0AA288BE7C900AB8E1E /* AppDelegate.swift in Sources */,
+				AF43DCB02894D8100097B531 /* UIImageView+DownloadImage.swift in Sources */,
 				AF56C0BE288C077400AB8E1E /* SearchResult.swift in Sources */,
 				AF56C0AC288BE7C900AB8E1E /* SceneDelegate.swift in Sources */,
 				AFD6351D288C5A9B00A44BE1 /* SearchResultCell.swift in Sources */,
