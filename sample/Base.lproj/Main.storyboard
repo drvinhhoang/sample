@@ -174,8 +174,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-DJ-CN5">
                                                         <rect key="frame" x="167" y="0.0" width="81" height="38"/>
                                                         <color key="tintColor" name="AccentColor"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="$9.99">
+                                                        <buttonConfiguration key="configuration" style="plain" title="$9.99" cornerStyle="small">
+                                                            <backgroundConfiguration key="background" image="PriceButton" imageContentMode="scaleToFill"/>
                                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                         </buttonConfiguration>
                                                     </button>
@@ -229,10 +231,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfA-Kl-clV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="108"/>
+            <point key="canvasLocation" x="1008.8" y="107.49625187406298"/>
         </scene>
     </scenes>
     <resources>
+        <image name="PriceButton" width="10.5" height="10"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.039215686274509803" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -18,7 +18,6 @@ extension UIImageView {
                 DispatchQueue.main.async {
                     if let weakSelf = self {
                         weakSelf.image = image
-                        
                     }
                 }
             }
