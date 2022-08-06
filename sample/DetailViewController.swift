@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var kindLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var priceButton: UIButton!
-    
+    var dimmingView: GradientView!
     var searchResult: SearchResult!
     private var downloadTask: URLSessionDownloadTask?
 
@@ -54,6 +54,10 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .clear
+        dimmingView = GradientView(frame: CGRect.zero)
+        dimmingView.frame = view.bounds
+        view.insertSubview(dimmingView, at: 0)
         popupView.layer.cornerRadius = 10
         let gestureRecognizer = UITapGestureRecognizer(
           target: self,
@@ -69,6 +73,6 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        return (touch.view === self.view)
+        return (touch.view === self.dimmingView)
     }
 }

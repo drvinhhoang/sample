@@ -34,6 +34,7 @@ class SearchViewController: UIViewController {
         tableView.register(UINib(nibName: TableView.CellIdentifiers.nothingFoundCell, bundle: nil), forCellReuseIdentifier: TableView.CellIdentifiers.nothingFoundCell)
        // tableView.rowHeight = UITableView.automaticDimension
         let cellNib = UINib(nibName: TableView.CellIdentifiers.loadingCell, bundle: nil)
+        searchBar.searchTextField.adjustsFontForContentSizeCategory = false
         
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
     }
